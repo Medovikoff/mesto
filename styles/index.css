@@ -1,0 +1,62 @@
+html {
+    
+    background: #000;
+    
+  }
+  
+  .page {
+  
+  
+  
+      max-width: 1280px;
+      margin: 0 auto;
+      
+      
+      
+      
+      font-family: 'Inter', 'Arial', sans-serif;
+      color: #fff;
+      overflow: hidden;
+      box-sizing: border-box;
+  
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      text-rendering: optimizeLegibility;
+  
+    }
+    .all {
+        width: calc(100% - 200px * 2);
+        margin: 45px auto 60px;
+    }
+/* header*/
+    .header__logo {
+        max-width: 142px;
+        max-height: 33px;
+        margin-bottom: 41px;
+    }
+    .header__line {
+        color: #545454;
+        height: 1px;
+        margin: 0;
+        
+    }
+    /* profile*/
+    .profile {
+        display: flex;
+        flex-direction: row;
+    }
+    .profile__image {
+    }
+    .profile__info {
+    }
+    .profile__name {
+    }
+    .profile__discription {
+    }
+    .profile__button {
+    }
+    .profile__add-button {
+    }

@@ -1,0 +1,18 @@
+.element {
+    min-width: 282px;
+    margin: 0 auto;
+    max-height: 282px; 
+    object-fit: cover;
+    overflow: hidden;
+    background-size: contain;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+@media screen and (max-width: 600px) {
+    .element {
+        margin: 0 auto;
+    }
+    
+}

@@ -1,0 +1,24 @@
+
+
+     .pop-up__close {
+        font-size: 32px;
+        color: #fff;
+        font-weight: 100;
+        position: absolute;
+        top: -32px;
+        right: -32px;
+        cursor: pointer;
+
+    }
+    @media screen and (max-width: 600px) {   
+        .pop-up__close {
+            right: 0;
+
+        }
+    }
+
+
+    .pop-up_close:hover {
+        opacity: .7;
+    }
+   

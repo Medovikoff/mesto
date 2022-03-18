@@ -1,385 +1,59 @@
 
 
+
+/* шрифт */
 @import url('../vendor/fonts.css');
+/* основное */
+@import url('../blocks/page/page.css');
+@import url('../blocks/all/all.css');
+/* header */
+@import url('../blocks/header/header.css');
+@import url('../blocks/header/__line/header__line.css');
+@import url('../blocks/header/__logo/header__logo.css');
+/* profile */
+@import url('../blocks/profile/profile.css');
+@import url('../blocks/profile/__main/profile__main.css');
+@import url('../blocks/profile/__image/profile__image.css');
+@import url('../blocks/profile/__column/profile__column.css');
+@import url('../blocks/profile/__name/profile__name.css');
+@import url('../blocks/profile/__description/profile__description.css');
+@import url('../blocks/profile/__edit-button/profile__edit-button.css');
+@import url('../blocks/profile/__button-pen/profile__button-pen.css');
+@import url('../blocks/profile/__add-button/profile__add-button.css');
+@import url('../blocks/profile/__inside-plus/profile__inside-plus.css');
+@import url('../blocks/profile/__info/profile__info.css');
+/* pop-up */
+@import url('../blocks/pop-up/__button/pop-up__button.css');
+@import url('../blocks/pop-up/pop-up.css');
+@import url('../blocks/pop-up/__container/pop-up__container.css');
+@import url('../blocks/pop-up/__form/pop-up__form.css');
+@import url('../blocks/pop-up/__title/pop-up__title.css');
+@import url('../blocks/pop-up/__input/_type/pop-up__input_type_user.css');
+@import url('../blocks/pop-up/__input/_type/pop-up__input_type_descr.css');
+@import url('../blocks/pop-up/__close/pop-up__close.css');
+@import url('../blocks/pop-up/__body/pop-up__body.css');
+/* elements */
+@import url('../blocks/elements/elements.css');
+@import url('../blocks/element/element.css');
+@import url('../blocks/elements/__title/elements__title.css');
+@import url('../blocks/elements/__like/elements__like.css');
+@import url('../blocks/elements/__envelop/elements__envelop.css');
+/* footer */
+@import url('../blocks/footer/footer.css');
 
-
+/* пусть побудет тут  */
 html {
     
-    background: #000;
+  background: #000;
     
-  }
+}
   hr {
       margin: 0;
-  }
-  .page {
-  
-  
-  
-      max-width: 1280px;
-      margin: 0 auto;
-      
-      
-      
-      
-      
+  }     
+
+
+ 
     
-      overflow: hidden;
-      box-sizing: border-box;
-  
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-      -moz-text-size-adjust: 100%;
-      text-rendering: optimizeLegibility;
-  
-    }
-    .all {
-        font-family: 'Inter', 'Arial', sans-serif;
-        width: calc(100% - 200px * 2);
-        margin: 45px auto 60px;
-        
-    }
-    @media screen and (max-width: 600px) {   
-        .all {
-            margin: 0 auto;
-            width: calc(100% - 19px*2);
-            margin: 28px auto 36px;
-            
-        }
-    }
-/* header*/
-    .header__logo {
-        max-width: 142px;
-        max-height: 33px;
-        margin-bottom: 41px;
-    }
-    @media screen and (max-width: 600px) {   
-        .header__logo {
-            max-width: 103.74px;
-            max-height: 24.4px;
-            margin-left: 8px;
-            margin-bottom: 31.6px;
-
-        }
-    }
-    .header__line {
-        color: #545454;
-        height: 1px;
-        margin: 0;
-        
-    }
-    /* profile*/
-    .profile {
-      
-           
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        margin: 36.25px auto 47.25px;
-        /* height: min-content; */
-    }
-    @media screen and (max-width: 600px) {   
-        .profile {
-          flex-direction: column;
-          align-items: center;
-          margin: 38.25px auto 36px;
-        }
-    }
-    .profile__image {
-        grid-area: pic;
-        object-fit: cover;
-        width: 127.5px;
-        height: 127.5px;
-        border-radius: 50%;
-        margin: 0;
-        margin-right: 22.5px;
-          
-    }
-    @media screen and (max-width: 600px) {   
-        .profile__image {
-         
-        }
-    }
-    .profile__info {
-        color: #fff;
-        text-decoration: none;
-        position: relative;
-        display: flex;
-        align-items: baseline;
-        max-width: 336px;
-        
-        
-    }
-    .profile__column { 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-
-    }
-    .profile__name {
-     
-        margin: 0;
-        margin-bottom: 16px;
-        margin-right: 18px;
-        color: #fff;
-        font-size: 42px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.15;
-        letter-spacing: 0em;
-        text-align: left;
-
-    }
-    @media screen and (max-width: 600px) {
-        .profile__name {
-            font-size: 27px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 1.2;
-            margin: 22.25px 15.25px 14px;
-            text-align: center;
-
-        }
-    }
-
-    .profile__discription {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        color: #fff;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
-
-    }
-    @media screen and (max-width: 600px) {
-        .profile__discription {
-            text-align: center;
-            font-size: 14px;
-            margin-bottom: 36px;
-
-        }
-    }
-    .profile__button {
-        position: relative;
-        
-     
-        
-    }
-    @media screen and (max-width: 600px) {
-        .profile__edit-button {
-            width: 18px;
-            height: 18px;
-        }
-    }
-    .profile__button-pen {
-        position: absolute;
-        top: 7px;
-        left: 7px;
-    }
-    .envelop {
-      display: grid;
-      justify-content: end;
-        
-    }
-    .profile__add-button {
-        display: grid;
-        align-self: center;
-        
-        position: relative;
-        width: 150px;
-        height: 50px;
-        border: #fff 2px solid;
-    }
-
-    @media screen and (max-width: 600px) {
-        .profile__add-button {
-            width: 282px;
-            
-        }
-        
-    }
-
-    .profile__inside-plus {
-        position: absolute;
-        top: 14px;
-        left: 64px;
-        max-width: 22px;
-        max-height: 22px;
-    }
-    /*elements*/
-    .elements {
-        margin: 0 auto 68px;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(282px, 1fr));
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: 17px;
-        row-gap: 20px;
-        
-    }
-    .element {
-        width: 100%;
-        max-height: 282px;
-        object-fit: cover;
-        overflow: hidden;
-        background-size: contain;
-        
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        
-    }
-    .element__title {
-        max-height: 80px;
-        display: flex;
-        justify-content: space-between;
-        background-color: #fff;
-        padding: 25px 15px 31px 21px;
-        margin-top: -4px;
-        font-size: 24px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 900;
-        line-height: 29px;
-        letter-spacing: 0em;
-        text-align: left;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        align-items: baseline;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .element__like {
-        display: flex;
-       
-        width: 22px;
-        height: 19px;
-    }
-    .element__envelop {
-        margin: 0;
-        max-width: 282px;
-        
-    } 
-
-    .footer {
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: #545454;
-
-    }
-    @media screen and (max-width: 768px) {   
-        .elements {
-            margin: 0 auto;
-            width: calc(100% - 19px*2);
-            grid-template-columns: 2fr;
-        }
-    }
-    @media screen and (max-width: 600px) {   
-        .elements {
-            margin: 0 auto;
-            width: calc(100% - 19px*2);
-            grid-template-columns: 1fr;
-        }
-    }  
-
-    .pop-up {
-        display: none;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        background-color: rgba(0, 0, 0, .3);
-        z-index: 2;
-
-    }
-    .pop-up__container {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
-    .pop-up__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: 1.2;
-        letter-spacing: 0em;
-        text-align: left;
-
-        margin: 195px auto;
-        background-color: #fff;
-        width: 430px;
-        height: 330px;
-        border-radius: 10px;
-        text-align: left;
-        position: relative;
-        
-    }
-    .pop-up__form {
-        
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0em;
-        text-align: left;
-
-        margin: 0 36px 37px;
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .pop-up__title {
-        margin: 34px 36px 0;
-    }
     
-    .pop-up__input_type_user {
-        display: block;
-        border: none;
-        outline: none;
-        margin: 54px 0 12px;
-    } 
-    .pop-up__input_type_descr {
-        display: block;
-        border: none;  
-        outline: none;
-        margin: 30px 0 12px;
-    }
     
-
-     .pop-up_close {
-        font-size: 32px;
-        color: #fff;
-        font-weight: 100;
-        position: absolute;
-        top: -32px;
-        right: -32px;
-        cursor: pointer;
-
-    }
-    .pop-up.active {
-        display: block;
-        
-    }
-    
-    .pop-up__button {
-        margin-top: 48px;
-        align-items: center;
-        width: 358px;
-        height: 50px;
-        font-size: 18px;
-        background-color: #000;
-        color: #fff;
-    }
+   

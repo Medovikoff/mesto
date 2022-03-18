@@ -1,0 +1,16 @@
+.all {
+    font-family: 'Inter', 'Arial', sans-serif;
+    width: calc(100% - 200px * 2);
+    margin: 45px auto 60px;
+    box-sizing: border-box;
+    
+}
+
+@media screen and (max-width: 600px) {   
+    .all {
+        
+        width: calc(100% - 19px*2);
+        margin: 28px auto 36px; 
+        
+    }
+}

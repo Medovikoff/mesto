@@ -1,0 +1,9 @@
+.profile__info {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    max-width: 336px;
+   
+}

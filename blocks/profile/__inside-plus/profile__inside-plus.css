@@ -1,0 +1,14 @@
+.profile__inside-plus {
+    position: absolute;
+    top: 14px;
+    left: 64px;
+    max-width: 22px;
+    max-height: 22px;
+}
+@media screen and (max-width: 900px) {
+    .profile__inside-plus {
+        max-width: 16px;
+        left: 134px;
+    }
+    
+}

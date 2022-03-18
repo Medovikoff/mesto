@@ -1,0 +1,15 @@
+.elements__like {
+    margin-left: 15px;
+    display: flex;
+    width: 22px;
+    height: 19px;
+    
+    
+}
+.elements__like:hover {
+    opacity: .6;
+}
+.elements__like:active {
+    background-image: url(../../../images/Union.png);
+    opacity: 1;
+}

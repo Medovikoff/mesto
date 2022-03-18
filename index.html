@@ -14,17 +14,91 @@
             <img src="./images/LogoMesto.png" alt="Mesto-Logotip" class="header__logo">
             <hr class="header__line" noshade=""></hr>
         </header>
+
         <section class="profile">
-            <img src="" alt="" class="profile__image">
-            <div class="profile__info">
-                <h1 class="profile__name"></h1>
-                <p class="profile__discription"></p>
-                <button class="profile__button"></button>
-            </div>
-            <div class="profile__add-button"></div>
+          
+               
+
+
+
+
+                <img src="./images/kusto.jpg" alt="avatar"
+                class="profile__image">
+                <div class="profile__column"><div class="profile__info"> <h1 class="profile__name">Жак-Ив Кусто</h1> 
+                <img src="./images/Edit Button.svg" alt="" class="profile__edit-button">
+              </div>
+                <p class="profile__discription">Исследователь океана</p></div>
+                
+                
+            
+                 <!-- popup -->
+
+                <div class="pop-up">
+                    <div class="pop-up__container">
+                        <div class="pop-up__body">
+                            <p class="pop-up__title">Редактировать профиль</p>
+                            <form class="pop-up__form" action="">
+                                <input class="pop-up__input_type_user" type="text" placeholder="name">
+                                <hr>
+                                <input class="pop-up__input_type_descr"  type="text" placeholder="description">
+                                <hr>
+                                <button type="submit" class="pop-up__button">Сохранить</button>
+                                <div class="pop-up_close">&#10006</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+           <div class="envelop"> <div class="profile__add-button"> 
+                <img  src="./images/Rectangle.png" alt="button">
+                <img class="profile__inside-plus" src="./images/plus.png" alt="plus">
+            </div></div>
+          
+
         </section>
-        <section class="elements"></section>
-        <footer class="footer"></footer>
+        <section class="elements">
+            <figure class="element__envelop">
+              <img src="./images/ekateringof.jpg" alt="park-na-zakate" class="element">
+              <figcaption class="element__title">Парк на закате
+                <img src="./images/like.svg" alt="" class="element__like">
+              </figcaption>
+            </figure>
+            <figure class="element__envelop">
+                <img src="./images/solnche.jpg" alt="solnche" class="element">
+                <figcaption class="element__title">Вид из окна
+                  <img src="./images/like.svg" alt="" class="element__like">
+                </figcaption>
+              </figure>
+              <figure class="element__envelop">
+                <img src="./images/kavgolovo.jpg" alt="kavgolovo" class="element">
+                <figcaption class="element__title">Кавголово
+                  <img src="./images/like.svg" alt="" class="element__like">
+                </figcaption>
+              </figure>
+              <figure class="element__envelop">
+                <img src="./images/krasnoarmeiskaya.jpg" alt="vid-is-okna" class="element">
+                <figcaption class="element__title">12 Красноармейская
+                  <img src="./images/like.svg" alt="" class="element__like">
+                </figcaption>
+              </figure>
+              <figure class="element__envelop">
+                <img src="./images/obvodnyi.jpg" alt="obvodnyi-canal" class="element">
+                <figcaption class="element__title">Обводный
+                  <img src="./images/like.svg" alt="" class="element__like">
+                </figcaption>
+              </figure>
+              <figure class="element__envelop">
+                <img src="./images/vereiska.jpg" alt="gogrodskoi-peizazh" class="element">
+                <figcaption class="element__title">Вечерний Питер
+                  <img src="./images/like.svg" alt="" class="element__like">
+                </figcaption>
+              </figure>
+          
+        </section>
+        <footer class="footer">&#169;2022 Mesto Russia</footer>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>

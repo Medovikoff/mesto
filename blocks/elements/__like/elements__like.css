@@ -1,11 +1,16 @@
 .elements__like {
     margin-left: 15px;
-    display: flex;
+    border: none;
     width: 22px;
     height: 19px;
-    
+    background-image: url(../../../images/like.svg);
+    background-color: #fff;
+    padding: 0;
+    z-index: 3;
     
 }
+
+
 .elements__like:hover {
     opacity: .6;
 }

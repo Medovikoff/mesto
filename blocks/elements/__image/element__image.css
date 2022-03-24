@@ -1,4 +1,4 @@
-.element {
+.element__image {
     min-width: 282px;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@
 
 }
 @media screen and (max-width: 600px) {
-    .element {
+    .element__image {
         margin: 0 auto;
     }
     

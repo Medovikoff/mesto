@@ -1,50 +1,28 @@
-let openPop = document.querySelector('.profile__edit-button');
-let closePop = document.querySelector('.pop-up__close');
-let popUp = document.querySelector('.pop-up');
-// let profileName = document.querySelector('.profile__name');
-// let profileDescription = document.querySelector('.profile__discription');
-// let popUpButton = document.querySelector('.pop-up__button');
-
-
+const openPop = document.querySelector('.profile__edit-button');
+const closePop = document.querySelector('.pop-up__close');
+const popUp = document.querySelector('.pop-up');
+ 
 
 openPop.addEventListener('click', function(e){
     e.preventDefault();
-    popUp.classList.add('active');
+    popUp.classList.add('pop-up_opened');
     
 })
 closePop.addEventListener('click', () => {
-    popUp.classList.remove('active');
+    popUp.classList.remove('pop-up_opened');
 })
 
+const profileName = document.querySelector('.profile__name');
 
+const profileDiscription = document.querySelector('.profile__discription');
 
+const form = document.querySelector('.pop-up__form');
 
-let profileName = document.querySelector('.profile__name');
-console.log(profileName)
-let profileDiscription = document.querySelector('.profile__discription');
-console.log(profileDiscription)
-let form = document.querySelector('.pop-up__form');
-console.log(form)
-let userName = form.querySelector('.pop-up__input_type_user');
-console.log(userName)
-let description = form.querySelector('.pop-up__input_type_descr');
-console.log(description)
+const userName = form.querySelector('.pop-up__input_type_user');
 
-let submitButton = document.querySelector('.pop-up__button');
-console.log(submitButton)
+const description = form.querySelector('.pop-up__input_type_descr');
 
-
-
-//
-
-
-
-
-
-
-
-
-
+const submitButton = document.querySelector('.pop-up__button');
 
 
  function addUser(evt) {
@@ -52,9 +30,8 @@ console.log(submitButton)
     
     profileName.textContent = userName.value;
     profileDiscription.textContent = description.value;
-    popUp.classList.remove('active');
+    popUp.classList.remove('pop-up_opened');
 }
 
 form.addEventListener('submit', addUser);
 
-// submitButton.addEventListener('submit', addUser);

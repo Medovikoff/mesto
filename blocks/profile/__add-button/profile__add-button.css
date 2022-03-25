@@ -1,7 +1,6 @@
 .profile__add-button {
     display: block;
-    border: none;
-    background-color: transparent; 
+    background-color: transparent;
     align-self: center;
     margin: 0;
     justify-self: end;

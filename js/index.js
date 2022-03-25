@@ -6,6 +6,8 @@ const popUp = document.querySelector('.pop-up');
 openPop.addEventListener('click', function(e){
     e.preventDefault();
     popUp.classList.add('pop-up_opened');
+    userName.value = profileName.textContent;
+    description.value = profileDiscription.textContent;
     
 })
 closePop.addEventListener('click', () => {

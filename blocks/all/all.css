@@ -20,7 +20,7 @@
 @media screen and (max-width: 600px) {   
     .all {
         
-        width: calc(100% - 19px*2); 
+       width: 100%;
     }
 }
 

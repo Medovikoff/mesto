@@ -1,6 +1,7 @@
 const openPop = document.querySelector('.profile__edit-button');
 const closePop = document.querySelector('.pop-up__close');
 const popUp = document.querySelector('.pop-up');
+
  
 
 openPop.addEventListener('click', function(e){
@@ -37,3 +38,14 @@ const submitButton = document.querySelector('.pop-up__button');
 
 form.addEventListener('submit', addUser);
 
+//adding places
+
+const popOpenPlace = document.querySelector('.profile__add-button')
+
+openPopPlace.addEventListener('click', function(e){
+    e.preventDefault();
+    popUp.classList.add('pop-up_opened');
+    userName.value = profileName.textContent;
+    description.value = profileDiscription.textContent;
+    
+})

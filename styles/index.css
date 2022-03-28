@@ -54,10 +54,22 @@ html {
 }
 button {
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
- 
+.elements__can {
+  
+  background-image: url(../images/Trash.svg);
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}   
     
-    
-    
+.elements__can:hover {
+  opacity: .7;
+}   
    

@@ -1,12 +1,13 @@
 .elements__image {
     position: relative;
-    min-width: 282px;
+    /*min-width: 282px;*/
+    width: 100%;
     margin: 0;
     padding: 0;
     max-height: 282px;
     object-fit: cover;
     overflow: hidden;
-    background-size: contain;
+    background-size: fit;
     box-sizing: border-box;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

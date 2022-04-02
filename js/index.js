@@ -74,3 +74,40 @@ const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ];
+
+const elementsTemplate = document.querySelector('.elements').content;
+const elements = elementsTemplate.querySelector('.elements__envelop').cloneNode(true);
+const onPage = document.querySelector('.onPage');
+
+elements.querySelector('.elements__image').src = initialCards[0].link;
+elements.querySelector('.elements__title').textContent = initiaCards[0].name;
+
+onPage.append(elements);
+
+
+
+// наполняем содержимым
+//userElement.querySelector('.user__avatar').src = 'tinyurl.com/v4pfzwy';
+//userElement.querySelector('.user__name').textContent = 'Дюк Корморант';
+
+/*const list = document.querySelector('.todo-list');
+
+// массив дел на сегодня
+const tasks = [
+  'Сделать проектную работу',
+  'Погулять с собакой',
+  'Пройти туториал по Реакту'
+];
+
+// создадим из массива дел массив элементов
+const taskElements = [];
+for (let i = 0; i < tasks.length; i++) {
+  const listItem = document.createElement('li');
+  listItem.textContent = tasks[i];
+    taskElements[i] = listItem;
+}
+
+// добавим элементы в DOM с использованием цикла
+for (let i = 0; i < taskElements.length; i++) {
+    list.append(taskElements[i])
+} */

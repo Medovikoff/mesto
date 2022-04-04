@@ -1,8 +1,47 @@
+
+
+const initialCards = [
+  {
+    name: 'Архыз',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Челябинская область',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Иваново',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Байкал',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+  }
+];
+
 const openPop = document.querySelector('.profile__edit-button');
 const closePop = document.querySelector('.pop-up__close');
 const popUp = document.querySelector('.pop-up');
 
- 
+// const togglePopup = popup => () => popup.classList.toggle("popup_opened");
+
+// const showProfileInfo = () => {
+//   popupProfileName.value = profileName.textContent;
+//   popupProfileStatus.value = profileStatus.textContent;
+// }
+
+// cbfghfghf);
+// editProfileInfoBtn.addEventListener("click", () => togglePopup(profilePopup));
+
+// showProfileInfo;
 
 openPop.addEventListener('click', function(e){
     e.preventDefault();
@@ -26,7 +65,8 @@ const userName = form.querySelector('.pop-up__input_type_user');
 const description = form.querySelector('.pop-up__input_type_descr');
 
 const submitButton = document.querySelector('.pop-up__button');
-
+// создать эл pop
+// get element image
 
  function addUser(evt) {
     evt.preventDefault ();
@@ -48,66 +88,38 @@ popOpenPlace.addEventListener('click', function(e){
 });
 
 
-const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
+
 
 const elementsTemplate = document.querySelector('.elements').content;
-const elements = elementsTemplate.querySelector('.elements__envelop').cloneNode(true);
+
 const onPage = document.querySelector('.onPage');
 
-elements.querySelector('.elements__image').src = initialCards[0].link;
-elements.querySelector('.elements__title').textContent = initiaCards[0].name;
-
-onPage.append(elements);
+// elements.querySelector('.elements__image').src = initialCards[0].link;
+// elements.querySelector('.elements__title').textContent = initialCards[0].name;
 
 
 
-// наполняем содержимым
-//userElement.querySelector('.user__avatar').src = 'tinyurl.com/v4pfzwy';
-//userElement.querySelector('.user__name').textContent = 'Дюк Корморант';
-
-/*const list = document.querySelector('.todo-list');
-
-// массив дел на сегодня
-const tasks = [
-  'Сделать проектную работу',
-  'Погулять с собакой',
-  'Пройти туториал по Реакту'
-];
-
-// создадим из массива дел массив элементов
-const taskElements = [];
-for (let i = 0; i < tasks.length; i++) {
-  const listItem = document.createElement('li');
-  listItem.textContent = tasks[i];
-    taskElements[i] = listItem;
+function openPicturePopUP(card) {
+  //Image.src , image.alt 
+  //text.textContent
+  //openPopup(popUp) 
 }
 
-// добавим элементы в DOM с использованием цикла
-for (let i = 0; i < taskElements.length; i++) {
-    list.append(taskElements[i])
-} */
+const createCard =(card) => {
+  console.log(card)
+  const element = elementsTemplate.querySelector('.elements__envelop').cloneNode(true);
+  const elementImage = element.querySelector('.elements__image');
+  const elementName = element.querySelector('.elements__title');
+  elementImage.src = card.link;
+  elementName.textContent = card.name;
+  elementImage.addEventListener('click', () => { 
+    openPicturePopUP(card)
+  } )
+  return element;
+  
+}
+
+const renderCard = card => onPage.prepend(card);
+
+
+initialCards.forEach(card => renderCard(createCard(card)));

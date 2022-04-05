@@ -65,6 +65,9 @@ const userName = form.querySelector('.pop-up__input_type_user');
 const description = form.querySelector('.pop-up__input_type_descr');
 
 const submitButton = document.querySelector('.pop-up__button');
+
+const popImage = document.querySelector('.pop-up-image');
+console.log(popImage)
 // создать эл pop
 // get element image
 
@@ -82,11 +85,19 @@ form.addEventListener('submit', addUser);
 
 const popOpenPlace = document.querySelector('.profile__add-button');
 
+// popOpenPlace.addEventListener('click', function(e){
+//     e.preventDefault();
+//     popImage.classList.add('pop-up_opened')
+// });
 popOpenPlace.addEventListener('click', function(e){
-    e.preventDefault();
-    popUp.classList.add('pop-up_opened')
-});
-
+  e.preventDefault();
+  popImage.classList.add('pop-up_opened');
+ 
+  
+})
+closePop.addEventListener('click', () => {
+  popImage.classList.remove('pop-up_opened');
+})
 
 
 

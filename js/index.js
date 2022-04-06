@@ -50,9 +50,9 @@ openPop.addEventListener('click', function(e){
     description.value = profileDiscription.textContent;
     
 })
-closePop.addEventListener('click', () => {
-    popUp.classList.remove('pop-up_opened');
-})
+ closePop.addEventListener('click', () => {
+  popUp.classList.remove('pop-up_opened');
+ })
 
 const profileName = document.querySelector('.profile__name');
 
@@ -84,13 +84,11 @@ form.addEventListener('submit', addUser);
 //adding places
 
 const popOpenPlace = document.querySelector('.profile__add-button');
+// console.log(popOpenPlace)
 
-// popOpenPlace.addEventListener('click', function(e){
-//     e.preventDefault();
-//     popImage.classList.add('pop-up_opened')
-// });
 popOpenPlace.addEventListener('click', function(e){
   e.preventDefault();
+  
   popImage.classList.add('pop-up_opened');
  
   

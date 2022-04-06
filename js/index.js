@@ -84,7 +84,7 @@ form.addEventListener('submit', addUser);
 //adding places
 
 const popOpenPlace = document.querySelector('.profile__add-button');
-// console.log(popOpenPlace)
+
 
 popOpenPlace.addEventListener('click', function(e){
   e.preventDefault();
@@ -115,7 +115,7 @@ function openPicturePopUP(card) {
 }
 
 const createCard =(card) => {
-  console.log(card)
+  
   const element = elementsTemplate.querySelector('.elements__envelop').cloneNode(true);
   const elementImage = element.querySelector('.elements__image');
   const elementName = element.querySelector('.elements__title');

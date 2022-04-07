@@ -31,6 +31,7 @@ const openPop = document.querySelector('.profile__edit-button');
 const closePop = document.querySelector('.pop-up__close');
 const popUp = document.querySelector('.pop-up');
 
+
 // const togglePopup = popup => () => popup.classList.toggle("popup_opened");
 
 // const showProfileInfo = () => {
@@ -67,7 +68,11 @@ const description = form.querySelector('.pop-up__input_type_descr');
 const submitButton = document.querySelector('.pop-up__button');
 
 const popImage = document.querySelector('.pop-up-image');
-console.log(popImage)
+
+const popImageClose = popImage.querySelector('.pop-up__close');
+
+const submitImage = popImage.querySelector('.pop-up__form');
+
 // создать эл pop
 // get element image
 
@@ -88,12 +93,12 @@ const popOpenPlace = document.querySelector('.profile__add-button');
 
 popOpenPlace.addEventListener('click', function(e){
   e.preventDefault();
-  
+
   popImage.classList.add('pop-up_opened');
  
   
 })
-closePop.addEventListener('click', () => {
+popImageClose.addEventListener('click', () => {
   popImage.classList.remove('pop-up_opened');
 })
 
@@ -103,10 +108,21 @@ const elementsTemplate = document.querySelector('.elements').content;
 
 const onPage = document.querySelector('.onPage');
 
-// elements.querySelector('.elements__image').src = initialCards[0].link;
-// elements.querySelector('.elements__title').textContent = initialCards[0].name;
+const inputImageTitle = popImage.querySelector('.pop-up__input_type_user'); 
+const inputLinkImage = popImage.querySelector('.pop-up__input_type_descr');
 
+function addCard (evt) {
+  evt.preventDefault();
+  const newCard = {};
+  newCard.name = inputImageTitle.value;
+  newCard.link = inputLinkImage.value;
+  const newElement = createCard(newCard);
+  renderCard(cardElement);
+}
 
+submitImage.addEventListener('submit', addCard); 
+
+const newElement = createCard(newCard);
 
 function openPicturePopUP(card) {
   //Image.src , image.alt 
@@ -132,3 +148,4 @@ const renderCard = card => onPage.prepend(card);
 
 
 initialCards.forEach(card => renderCard(createCard(card)));
+
